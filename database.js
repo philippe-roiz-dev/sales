@@ -4,7 +4,7 @@ const { Client } = require('pg');
 const client = new Client({
     user: 'postgres',       // substitua pelo seu usuário do PostgreSQL
     host: 'localhost',         // ou o endereço do servidor PostgreSQL
-    database: 'postgres',         // nome do banco de dados
+    database: 'sales',         // nome do banco de dados
     password: 'postgres',     // substitua pela sua senha do PostgreSQL
     port: 5432,                // porta padrão do PostgreSQL
 });

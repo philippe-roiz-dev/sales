@@ -11,7 +11,7 @@ app.post('/promotion', async (req, res) => {
     const { name, promotion_date } = req.body;
     console.log(req.body);
     try {
-        await query('INSERT INTO promotions (id, nome, promotion_date) VALUES ($1, $2, $3)', [uuidv4(), name, promotion_date]);
+        await query('INSERT INTO promotions (id, name, promotion_date) VALUES ($1, $2, $3)', [uuidv4(), name, promotion_date]);
         res.status(201).send('Promoção cadastrada com sucesso');
     } catch (err) {
         console.error(err);
