@@ -1,7 +1,7 @@
-const { query } = require('../../config/database');
+const { query, connectDb } = require('../../config/database');
 
 // Inserir uma nova promoção
-exports.insertPromotion = (id, name, promotion_date) => {
+exports.insertPromotion = async (id, name, promotion_date) => {
     return query('INSERT INTO promotions (id, name, promotion_date) VALUES ($1, $2, $3)', [id, name, promotion_date]);
 };
 
